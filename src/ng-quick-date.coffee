@@ -247,7 +247,7 @@ app.directive "quickDatepicker", ['ngQuickDateDefaults', '$filter', '$sce', (ngQ
 
     # DATA WATCHES
     # ==================================
-    
+
     # Called when the model is updated from outside the datepicker
     ngModelCtrl.$render = ->
       setCalendarDate(ngModelCtrl.$viewValue)
@@ -266,6 +266,7 @@ app.directive "quickDatepicker", ['ngQuickDateDefaults', '$filter', '$sce', (ngQ
       if newVal
         dateInput = angular.element(element[0].querySelector(".quickdate-date-input"))[0]
         dateInput.select()
+        refreshView()
 
 
     # VIEW ACTIONS

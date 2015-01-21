@@ -269,7 +269,8 @@
             var dateInput;
             if (newVal) {
               dateInput = angular.element(element[0].querySelector(".quickdate-date-input"))[0];
-              return dateInput.select();
+              dateInput.select();
+              return refreshView();
             }
           });
           scope.toggleCalendar = debounce(function(show) {
